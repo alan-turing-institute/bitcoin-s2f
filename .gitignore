@@ -132,3 +132,4 @@ dmypy.json
 
 # Ignore data folder
 data/
+.Rproj.user

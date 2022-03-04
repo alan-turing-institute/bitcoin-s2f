@@ -1,0 +1,13 @@
+Package: s2fr
+Type: Package
+Title: Bitcoin stock-to-flow modelling
+Version: 0.1.0
+Author: Tim Hobson <thobson@turing.ac.uk>
+Maintainer: Tim Hobson <thobson@turing.ac.uk>
+Description: Bitcoin stock-to-flow modelling.
+License: MIT
+Imports: utils
+Suggests: testthat
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.2
