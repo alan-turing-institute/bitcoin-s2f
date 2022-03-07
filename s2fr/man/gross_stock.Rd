@@ -4,22 +4,25 @@
 \alias{gross_stock}
 \title{Gross stock}
 \usage{
-gross_stock(block_height)
+gross_stock(block_height, by_halving = FALSE)
 }
 \arguments{
-\item{block_height}{The block height.}
+\item{block_height}{The (integer) block height.}
+
+\item{by_halving}{A logical value. If TRUE, the gross stock is returned as a vector
+with one element per halving period.}
 }
 \value{
-The gross stock of bitcoins as an integer number of satoshis.
+The gross Bitcoin stock as an integer number of satoshis.
 }
 \description{
-Returns the gross stock of bitcoins for a given block height.
+Returns the gross Bitcoin stock, in satoshis, for a given block height.
 }
 \examples{
 gross_stock(1)
-gross_stock(100000)
+gross_stock(209999)
+gross_stock(210000)
+gross_stock(210000, by_halving = TRUE)
+gross_stock(420000, by_halving = TRUE)
 gross_stock(723896)
-}
-\seealso{
-\code{\link{execute_synthetic_experiment}}
 }

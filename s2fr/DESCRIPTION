@@ -5,8 +5,7 @@ Version: 0.1.0
 Author: Tim Hobson <thobson@turing.ac.uk>
 Maintainer: Tim Hobson <thobson@turing.ac.uk>
 Description: Bitcoin stock-to-flow modelling.
-License: MIT
-Imports: utils
+License: MIT + file LICENSE
 Suggests: testthat
 Encoding: UTF-8
 LazyData: true

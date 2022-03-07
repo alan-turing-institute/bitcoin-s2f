@@ -5,3 +5,4 @@
 #' @name s2fr-constants
 NULL
 halving_period <- 210000
+max_block_subsidy <- 5000000000
