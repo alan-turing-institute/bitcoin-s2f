@@ -20,7 +20,7 @@ test_that("the gross_stock function works", {
 
 })
 
-test_that("the gross_stock function works with vector arguments", {
+test_that("the gross_stock function works with a vector argument", {
 
   result = gross_stock(0:10)
 

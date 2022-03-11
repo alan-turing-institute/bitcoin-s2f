@@ -3,10 +3,11 @@
 #' Returns the gross Bitcoin stock, in satoshis, for a given block height.
 #'
 #' @param block_height
-#' The (integer) block height.
+#' The (integer) block height. May be a vector.
 #' @param by_halving
 #' A logical value. If TRUE, the gross stock is returned as a vector
-#' with one element per halving period.
+#' with one element per halving period. Ignored if \code{block_height}
+#' has length >1.
 #'
 #' @return The gross Bitcoin stock as an integer number of satoshis.
 #'

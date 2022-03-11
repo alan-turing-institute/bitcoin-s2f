@@ -7,10 +7,11 @@
 gross_stock(block_height, by_halving = FALSE)
 }
 \arguments{
-\item{block_height}{The (integer) block height.}
+\item{block_height}{The (integer) block height. May be a vector.}
 
 \item{by_halving}{A logical value. If TRUE, the gross stock is returned as a vector
-with one element per halving period.}
+with one element per halving period. Ignored if \code{block_height}
+has length >1.}
 }
 \value{
 The gross Bitcoin stock as an integer number of satoshis.
