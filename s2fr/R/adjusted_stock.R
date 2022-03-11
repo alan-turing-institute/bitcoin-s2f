@@ -18,7 +18,7 @@
 #' adjusted_stock(209999, 1896164634950948, 723896)
 #' adjusted_stock(723896, 1896164634950948, 723896)
 #'
-#' adjusted_stock(0:10)
+#' adjusted_stock(0:10, 1896164634950948, 723896)
 adjusted_stock <- function(block_height, total_amount, total_amount_height) {
 
   # Check all arguments are integer values.

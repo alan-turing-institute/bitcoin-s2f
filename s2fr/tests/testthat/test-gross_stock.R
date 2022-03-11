@@ -22,7 +22,7 @@ test_that("the gross_stock function works", {
 
 test_that("the gross_stock function works with a vector argument", {
 
-  result = gross_stock(0:10)
+  result <- gross_stock(0:10)
 
   expect_equal(length(result), 11)
   expect_equal(result[1], 0)
