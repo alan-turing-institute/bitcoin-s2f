@@ -19,7 +19,14 @@
 #' gross_stock(210000, by_halving = TRUE)
 #' gross_stock(420000, by_halving = TRUE)
 #' gross_stock(723896)
+#'
+#' gross_stock(0:10)
 gross_stock <- function(block_height, by_halving = FALSE) {
+
+  if (length(block_height) > 1)
+    return(vapply(block_height, FUN.VALUE = double(1), FUN=function(k) {
+      gross_stock(k, by_halving = FALSE)
+    }))
 
   stopifnot(as.integer(block_height) == block_height)
 
@@ -30,15 +37,14 @@ gross_stock <- function(block_height, by_halving = FALSE) {
     blocks <- ifelse(i == halvings, yes = blocks_since_last_halving, no = s2fr::halving_period)
 
     # Account for the unspendable genesis block coinbase.
-    if (i == 0) {
+    if (i == 0)
       blocks <- blocks - 1
-    }
 
     blocks * s2fr::max_block_subsidy * 2^(-i)
   })
 
-  if (by_halving) {
+  if (by_halving)
     return(coins_per_halving_period)
-  }
+
   sum(coins_per_halving_period)
 }

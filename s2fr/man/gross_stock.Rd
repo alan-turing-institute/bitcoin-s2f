@@ -25,4 +25,6 @@ gross_stock(210000)
 gross_stock(210000, by_halving = TRUE)
 gross_stock(420000, by_halving = TRUE)
 gross_stock(723896)
+
+gross_stock(0:10)
 }

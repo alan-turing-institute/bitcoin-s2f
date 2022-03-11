@@ -20,3 +20,14 @@ test_that("the gross_stock function works", {
 
 })
 
+test_that("the gross_stock function works with vector arguments", {
+
+  result = gross_stock(0:10)
+
+  expect_equal(length(result), 11)
+  expect_equal(result[1], 0)
+  expect_equal(result[2], 5000000000)
+  expect_equal(result[3], 10000000000)
+  expect_equal(result[4], 15000000000)
+})
+
